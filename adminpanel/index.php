@@ -10,7 +10,7 @@ $queryProduk = mysqli_query($con, "SELECT * FROM produk");
 $jumlahProduk = mysqli_num_rows($queryProduk);
 
 ?>
-
+~
 <!DOCTYPE html>
 <html>
 
