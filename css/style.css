@@ -49,6 +49,31 @@
 }
 
 .text-harga {
-  font-size: 20px;
+  font-size: 22px;
   color: #ca965c;
 }
+
+.image-box{
+  height: 250px;
+}
+.image-box img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.content-subscribe {
+  background-color: rgba(0, 0, 0, 0.7);
+}
+.content-subscribe a{
+  color: #fff;
+}
+
+.banner-produk {
+  height: 45vh;
+  background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
+    url("../image/sqWeXsMvy5N0IzsOn4yW.png");
+    background-position: 50% 35%;
+}
+
