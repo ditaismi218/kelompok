@@ -53,7 +53,7 @@
   color: #ca965c;
 }
 
-.image-box{
+.image-box {
   height: 250px;
 }
 .image-box img {
@@ -66,7 +66,7 @@
 .content-subscribe {
   background-color: rgba(0, 0, 0, 0.7);
 }
-.content-subscribe a{
+.content-subscribe a {
   color: #fff;
 }
 
@@ -74,6 +74,12 @@
   height: 45vh;
   background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
     url("../image/sqWeXsMvy5N0IzsOn4yW.png");
-    background-position: 50% 35%;
+  background-position: 50% 35%;
 }
 
+.produk-terkait-image {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  object-position: center;
+}
