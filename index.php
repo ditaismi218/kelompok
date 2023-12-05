@@ -25,7 +25,8 @@ $queryProduk = mysqli_query($con, "SELECT id, nama, harga, foto, detail FROM pro
             <div class="col-md-8 offset-md-2">
                 <form method="get" action="produk.php">
                     <div class="input-group input-group-lg my-4">
-                        <input type="text" class="form-control" placeholder="Cari Disini" aria-label="Recipient's username" aria-describedby="basic-addon2" name="keyword">
+                        <input type="text" class="form-control" placeholder="Cari Disini"
+                            aria-label="Recipient's username" aria-describedby="basic-addon2" name="keyword">
                         <button type="submit" class="btn warna1 text-white">Telusuri</button>
                     </div>
                 </form>
@@ -39,13 +40,15 @@ $queryProduk = mysqli_query($con, "SELECT id, nama, harga, foto, detail FROM pro
 
             <div class="row nt-5">
                 <div class="col-md-4 mb-3">
-                    <div class="highlighted-kategori kategori-baju-pria d-flex justify-content-center align-items-center">
+                    <div
+                        class="highlighted-kategori kategori-baju-pria d-flex justify-content-center align-items-center">
                         <h4 class="text-white"><a class="no-decoration" href="produk.php?kategori=Baju Pria">Baju
                                 Pria</a></h4>
                     </div>
                 </div>
                 <div class="col-md-4 mb-3">
-                    <div class="highlighted-kategori kategori-baju-wanita d-flex justify-content-center align-items-center">
+                    <div
+                        class="highlighted-kategori kategori-baju-wanita d-flex justify-content-center align-items-center">
                         <h4 class="text-white"><a class="no-decoration" href="produk.php?kategori=Baju Wanita">Baju
                                 Wanita</a></h4>
                     </div>
@@ -83,14 +86,21 @@ $queryProduk = mysqli_query($con, "SELECT id, nama, harga, foto, detail FROM pro
                     <?php while ($data = mysqli_fetch_array($queryProduk)) { ?>
                         <div class="col-sm-6 col-md-4 mb-3">
                             <div class="card h-100">
-                               <div class="image-box">
-                               <img src="image/<?php echo $data['foto']; ?>" class="card-img-top" alt="...">
-                               </div>
+                                <div class="image-box">
+                                    <img src="image/<?php echo $data['foto']; ?>" class="card-img-top" alt="...">
+                                </div>
                                 <div class="card-body">
-                                    <h4 class="card-title"><?php echo $data['nama']; ?></h4>
-                                    <p class="card-text text-truncate"><?php echo $data['detail']; ?></p>
-                                    <p class="card-text text-harga">Rp <?php echo $data['harga']; ?></p>
-                                    <a href="produk-detail.php?nama=<?php echo $data['nama']; ?>" class="btn warna2 ">Lihat Detail</a>
+                                    <h4 class="card-title">
+                                        <?php echo $data['nama']; ?>
+                                    </h4>
+                                    <p class="card-text text-truncate">
+                                        <?php echo $data['detail']; ?>
+                                    </p>
+                                    <p class="card-text text-harga">Rp
+                                        <?php echo $data['harga']; ?>
+                                    </p>
+                                    <a href="produk-detail.php?nama=<?php echo $data['nama']; ?>" class="btn warna2 ">Lihat
+                                        Detail</a>
                                 </div>
                             </div>
                         </div>
@@ -101,12 +111,13 @@ $queryProduk = mysqli_query($con, "SELECT id, nama, harga, foto, detail FROM pro
 
             </div>
         </div>
+    </div>
 
-        
-        <?php require "footer.php"; ?>
-        <script src=" bootstrap/js/bootstrap.bundle.min.js">
-        </script>
-        <script src="fontawesome/js/all.min.js"></script>
+
+    <?php require "footer.php"; ?>
+    <script src=" bootstrap/js/bootstrap.bundle.min.js">
+    </script>
+    <script src="fontawesome/js/all.min.js"></script>
 </body>
 
 </html>
