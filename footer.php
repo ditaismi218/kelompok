@@ -17,13 +17,13 @@
             <div class="col-sm-1 d-flex justify-content-center ">
                 <a href="https://web.whatsapp.com"><i class="fab fa-whatsapp fs-2"></i></a>
             </div>
-        </div>    
+        </div>
     </div>
 </div>
 
-<div class="container-fluid py-3 bg-dark text-light">
+<div class="container-fluid py-3 warna5 text-light">
     <div class="container d-flex justify-content-between">
-        <label>$copy;2021 kafe saya</label>
-        <label>Create by kami</label>
+        <label>Copyright - StarFashion</label>
+        <label>Create by Dita, Fadhil, Bagus</label>
     </div>
 </div>

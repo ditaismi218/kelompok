@@ -7,6 +7,40 @@ $id = $_GET['p'];
 $query = mysqli_query($con, "SELECT * FROM kategori WHERE id='$id'");
 $data = mysqli_fetch_array($query);
 
+// Inisialisasi variabel $alertMessage
+$alertMessage = '';
+
+if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+    if (isset($_POST['editBtn'])) {
+        // Proses edit kategori
+        $newCategoryName = mysqli_real_escape_string($con, $_POST['kategori']);
+
+        if (empty($newCategoryName)) {
+            $alertMessage = 'Nama kategori tidak boleh kosong.';
+        } else {
+            $updateQuery = mysqli_query($con, "UPDATE kategori SET nama='$newCategoryName' WHERE id='$id'");
+
+            if ($updateQuery) {
+                $alertMessage = 'Kategori berhasil diupdate.';
+            } else {
+                $alertMessage = 'Gagal mengupdate kategori. Error: ' . mysqli_error($con);
+            }
+        }
+    } elseif (isset($_POST['deleteBtn'])) {
+        // Proses hapus kategori
+        $deleteQuery = mysqli_query($con, "DELETE FROM kategori WHERE id='$id'");
+
+        if ($deleteQuery) {
+            $alertMessage = 'Kategori berhasil dihapus.';
+            // Redirect ke halaman kategori.php setelah menghapus
+            header("Location: kategori.php");
+            exit();
+        } else {
+            $alertMessage = 'Gagal menghapus kategori. Error: ' . mysqli_error($con);
+        }
+    }
+}
+
 ?>
 
 <!DOCTYPE html>

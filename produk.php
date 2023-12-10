@@ -39,9 +39,28 @@ $countData = mysqli_num_rows($queryProduk);
     <?php require "navbar.php"; ?>
 
     <!-- banner -->
-    <div class="container-fluid banner-produk d-flex align-items-center">
-        <div class="container">
-            <h1 class="text-white text-center">produk</h1>
+    <div class="container-fluid banner d-flex align-items-center mt-3">
+        <div class="card flex-fill border-0 warnanav banner1" style="position: relative;">
+
+            <!-- Gambar -->
+            <img src="image/bannersf.png" alt="Banner Image" class="img-fluid"
+                style="object-fit: cover; height: 100%; border-radius: 30px;">
+
+            <!-- search -->
+            <div class="container mobile-margin" style="margin-top:-35px;">
+                <form method="get" action="produk.php">
+                    <div class="input-group warnanav shadow" style="border-radius: 15px;">
+                        <input type=" text" class="form-control" placeholder="Cari Disini"
+                            style="border-radius: 15px; padding: 0 25px; margin:9px;" aria-label="Recipient's username"
+                            aria-describedby="basic-addon2" name="keyword">
+                        <div class="input-group-append" style="margin: 10px;">
+                            <button type="submit" class="btn illustration2 text-white"
+                                style="padding: 7px 20px; border-radius: 8px; font-weight:bold; font-size:18px;">Telusuri</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+
         </div>
     </div>
 
@@ -50,7 +69,7 @@ $countData = mysqli_num_rows($queryProduk);
         <div class="row">
             <div class="col-lg-3 mb-5">
                 <h3>Kategori</h3>
-                <ul class="list-group">
+                <ul class="list-group shadow mt-3">
                     <?php while ($kategori = mysqli_fetch_array($queryKategori)) { ?>
                         <a class="no-decoration" href="produk.php?kategori=<?php echo $kategori['nama'] ?>">
                             <li class="list-group-item">
@@ -72,7 +91,7 @@ $countData = mysqli_num_rows($queryProduk);
                     ?>
                     <?php while ($produk = mysqli_fetch_array($queryProduk)) { ?>
                         <div class="col-md-4 mb-5">
-                            <div class="card h-100">
+                            <div class="card h-100 shadow">
                                 <div class="image-box">
                                     <img src="image/<?php echo $produk['foto']; ?>" class="card-img-top" alt="...">
                                 </div>
